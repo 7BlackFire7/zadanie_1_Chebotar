@@ -34,7 +34,43 @@ https://templatemo.com/tm-574-mexant
 
 
   <!-- ***** Header Area Start ***** -->
-  
+  <?php // header.php ?>
+<header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.php" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                        <li class="scroll-to-section"><a href="#services">Services</a></li>
+                        <li class="scroll-to-section"><a href="#about">About</a></li>
+                        <li class="has-sub">
+                            <a href="javascript:void(0)">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="about-us.php">About Us</a></li>
+                                <li><a href="our-services.php">Our Services</a></li>
+                                <li><a href="contact-us.php">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="contact-us.php">Contact Support</a></li> 
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
   <!-- ***** Header Area End ***** -->
 
   <!-- ***** Main Banner Area Start ***** -->
@@ -466,6 +502,18 @@ https://templatemo.com/tm-574-mexant
   </section>
 
 
+  <?php // footer.php ?>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; <?php echo date('Y'); ?> Mexant Co., Ltd. All Rights Reserved. 
+                <br>Designed by <a title="CSS Templates" rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -521,5 +569,9 @@ https://templatemo.com/tm-574-mexant
 
       var swiper = new Swiper(".swiper-container", swiperOptions);
     </script>
+  <!-- A zavolame header -->
+  <?php include 'header.php'; ?>
+  <!-- A zavolame footer -->
+  <?php include 'footer.php'; ?>
   </body>
 </html>
