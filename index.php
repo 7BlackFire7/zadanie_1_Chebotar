@@ -1,8 +1,16 @@
+<?php
+// Load JSON file
+$json = file_get_contents('data.json');
+$data = json_decode($json, true);
+
+// Get cryptocurrencies
+$cryptos = $data['cryptos'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -14,23 +22,32 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-<!--
-
-TemplateMo 574 Mexant
-
-https://templatemo.com/tm-574-mexant
-
--->
-  </head>
+</head>
 
 <body>
+
+    <section class="container text-center">
+        <h1>Cryptocurrency Prices</h1>
+
+        <?php foreach ($cryptos as $crypto): ?>
+            <div class="crypto" style="display: inline-block; background: #1e1e1e; padding: 15px; margin: 10px; border-radius: 10px; width: 200px;">
+                <img src="<?= $crypto['image'] ?>" alt="<?= $crypto['name'] ?>" style="width: 80px; height: 80px;">
+                <h2><?= $crypto['name'] ?> (<?= $crypto['symbol'] ?>)</h2>
+                <p>Price: $<?= $crypto['price'] ?></p>
+            </div>
+        <?php endforeach; ?>
+
+    </section>
+
+</body>
+</html>
+
 
 
   <!-- ***** Header Area Start ***** -->
