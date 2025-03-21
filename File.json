@@ -1,0 +1,16 @@
+{
+  "cryptos": {
+    "bitcoin": {
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "price": "67000",
+      "image": "https://cryptologos.cc/logos/bitcoin-btc-logo.png"
+    },
+    "ethereum": {
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "price": "3800",
+      "image": "https://cryptologos.cc/logos/ethereum-eth-logo.png"
+    }
+  }
+}
